@@ -27,4 +27,4 @@ asd
 |----------|----------|----------|
 | Zawartość| Zawartość| Zawartość|
 
-! [dog] (/Labolatorium_2/dog.jpg)
+![dog] (/Labolatorium_2/dog.jpg)
