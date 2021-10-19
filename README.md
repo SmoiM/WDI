@@ -22,7 +22,6 @@ https://home.agh.edu.pl/~pawljmlo/didactics/intro/2021/1
 msg = "Hello World"
 print(msg)
 ```
-asd
 |Nagłówek 1|Nagłówek 2|Nagłówek 3|
 |----------|----------|----------|
 | Zawartość| Zawartość| Zawartość|
