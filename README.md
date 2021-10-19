@@ -18,10 +18,10 @@ https://home.agh.edu.pl/~pawljmlo/didactics/intro/2021/1
 * Drugie
 * Trzecie
 
-~~~~
+```python
 msg = "Hello World"
 print(msg)
-~~~~
+```
 
 |Nagłówek 1|Nagłówek 2|Nagłówek 3|
 |----------|----------|----------|
