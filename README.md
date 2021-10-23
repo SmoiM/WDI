@@ -26,4 +26,4 @@ print(msg)
 |----------|----------|----------|
 | Zawartość| Zawartość| Zawartość|
 
-![dog](Labolatorium_2/cat.jpg)
+![dog](Labolatorium_2/dog.jpg)
