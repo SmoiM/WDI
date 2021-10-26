@@ -10,6 +10,6 @@ liczba2 = int(input("Prosze podac liczbe2: "))
 print ("Wprowadzone przez Ciebie liczby to: %d i %d" %(liczba1, liczba2))
 
 if (liczba1 and liczba2 < 0):
-    print ("Jedna liczba jest mniejsza od zera")
-
-else:
+    print ("Liczby sa mniejsze od zera")
+if(liczba1 < 0):
+    liczba1=-liczba1
