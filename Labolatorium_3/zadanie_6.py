@@ -30,7 +30,7 @@ kwadrat2 = liczba2 ** 2
 pierwiastek1 = liczba1 ** (1 / 2)
 pierwiastek2 = liczba2 ** (1 / 2)
 
-print("Suma: %d\nRoznica: %d\n iloczyn :%d\n iloraz: %f\n kwadrat liczby pierwszej: %d\n kwadrat liczby drugiej: %d\n pierwiastak liczby pierwszej: %d\n pierwiastek liczby drugiej: %d\n" %(suma, roznica, iloczyn, iloraz, kwadrat1, kwadrat2, pierwiastek1, pierwiastek2) )
-
 if (iloczyn == 10):
-    print("Yay!")
+    print("Suma: %d\nRoznica: %d\n iloczyn :%d Yay!\n iloraz: %f\n kwadrat liczby pierwszej: %d\n kwadrat liczby drugiej: %d\n pierwiastak liczby pierwszej: %d\n pierwiastek liczby drugiej: %d\n" %(suma, roznica, iloczyn, iloraz, kwadrat1, kwadrat2, pierwiastek1, pierwiastek2) )
+else:
+    print("Suma: %d\nRoznica: %d\niloczyn :%d\niloraz: %f\nkwadrat liczby pierwszej: %d\nkwadrat liczby drugiej: %d\npierwiastak liczby pierwszej: %d\npierwiastek liczby drugiej: %d\n" %(suma, roznica, iloczyn, iloraz, kwadrat1, kwadrat2, pierwiastek1, pierwiastek2) ) 
