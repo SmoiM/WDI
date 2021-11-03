@@ -55,5 +55,6 @@ while wyjscie != 1:
         case "4":
             print ("\nDziękujemy za skorzystanie z naszego bankomatu")
             wyjscie += 1
+            
         case _:
             print("\nNie ma takiej operacji. Spróbuj jeszcza raz")
