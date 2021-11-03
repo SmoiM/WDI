@@ -11,6 +11,7 @@ while odpowiedz == "T":
 
     liczba1 = float(input("Podaj pierwszą liczbę: "))
     liczba2 = float(input("Podaj drugą liczbę: "))
+    liczba3 = 0
     dzialanie = str(input("wybierz tryb programu (+ (dodawanie), - (odejmowanie), * (mnożenie), / (dzielenie), ** (potęgowanie), ^ (pierwiastkowanie), x (losowa liczba z   przedziału)): "))
 
     match dzialanie:
@@ -26,8 +27,11 @@ while odpowiedz == "T":
             print(wynik)
 
         case "/":
-            wynik = liczba1 / liczba2
-            print(wynik)
+            if liczba2 == 0:
+                print("Nie dzielimy przez zero")
+            else:
+                wynik = liczba1 / liczba2
+                print(wynik)
 
         case "**":
             wynik = liczba1 ** liczba2
@@ -39,8 +43,17 @@ while odpowiedz == "T":
             print(wynik1," ", wynik2)
 
         case "x":
-            los = random.randint(liczba1, liczba2)
-            print(los)
+            liczba3 = 0
+
+            if liczba1 > liczba2:
+                liczba3 = liczba2
+                liczba2 = liczba1
+                liczba1 = liczba3
+                los = random.randint(liczba1, liczba2)
+                print(los)
+            else:
+                los = random.randint(liczba1, liczba2)
+                print(los)
 
     print("Czy chcesz wprowadzić nowe dane? Tak - wpisz T. Jeśli nie - wpisz N")
     odpowiedz = str(input())
