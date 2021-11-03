@@ -1,8 +1,11 @@
 wysokosc = int(input("Proszę podać wysokość choinki: "))
 rzad = 0
-dodatek = 0
 galaz = "*"
 spacja = wysokosc -1
+
+if wysokosc < 0 or wysokosc == 0:
+    print("wysokość musi być liczbą całkowitą większą od zera!!!")
+    quit()
 
 while rzad < wysokosc:
     if rzad == 0:
