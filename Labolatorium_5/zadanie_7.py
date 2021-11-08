@@ -14,7 +14,7 @@ else:
     while pom <= liczba:
         dzielnik = liczba / pom
         if dzielnik - int(dzielnik) == 0:
-            print(pom)
+            print("+/-", pom)
             pom += 1
         else:
             pom += 1
