@@ -22,7 +22,6 @@ while fib1 <= 1000000:
 #zmienne pomocnicze do listy
 i = 0
 j = 1
-pomj = 2
 dlugosc = len(tab)
 
 #pobieranie liczby od użytkownika z zagwarantowaniem, że jest to liczba naturalna
@@ -35,7 +34,7 @@ while True:
             continue 
         break
     except:
-        print("Podane wyrażenie nie jest liczbą naturalną. Spróbuj ponownie")        
+        print("Podane wyrażenie nie jest liczbą naturalną. Spróbuj ponownie")
 
 #sprawdzenie czy liczba jest iloczynem dwówch wyrazów ciągu Fibonacciego
 while i <= dlugosc - 1:
@@ -49,9 +48,11 @@ while i <= dlugosc - 1:
         else:    
             i += 1
             j = i + 1
-            pomj += 1
 
-    #wykona się, gdy tab[i] przedostatni element listy, [j] ostatni element listy
+    #wykona się, gdy tab[i] to przedostatni element listy oraz tab[j] to ostatni element listy
     if i == dlugosc - 2 and j == dlugosc - 1:
         print("Ta liczba nie jest iloczynem żadnego z dwóch wyrazów ciągu Fibonacciego")
         break
+
+#przykłady:
+# 8, 10, 62 423 800 997 (26 i 29 wyraz ciągu), 62 423 800 998, 33 550, 121, 999 888
