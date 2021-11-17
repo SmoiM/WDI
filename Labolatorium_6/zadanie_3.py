@@ -12,46 +12,62 @@ fib3 = fib1 + fib2
 #zdefiniowanie pustej listy
 tab = []
 
+n = 1000000
 #Dodawanie elementów do listy
-while fib1 <= 1000000:
+while fib1 <= n:
     tab.append(fib1) 
     fib1 = fib2
     fib2 = fib3
     fib3 = fib1 + fib2
+
 
 #zmienne pomocnicze do listy
 i = 0
 j = 1
 dlugosc = len(tab)
 
+#Zdefiniowanie wyjątku
+class NegativeNumberError(Exception): 
+    pass 
+class TooBigNumberError(Exception): 
+    pass
+
 #pobieranie liczby od użytkownika z zagwarantowaniem, że jest to liczba naturalna
 while True:
     try:
         liczba = int(input("Podaj liczbę: "))
         if liczba < 0:
-            print("Liczba nie jest naturalna")
-            #powrót do początku pętli z pominięciem następnych linii kodu
-            continue 
+            raise 
+        if liczba > tab[dlugosc - 2] * tab[dlugosc - 1]:
+            raise TooBigNumberError
         break
-    except:
-        print("Podane wyrażenie nie jest liczbą naturalną. Spróbuj ponownie")
+    
+    except NegativeNumberError: 
+        print("Liczba nie jest naturalna") 
+    except TooBigNumberError: 
+        print("Wprowadzona liczba jest za duża. Wpisz mniejszą")
+
 
 #sprawdzenie czy liczba jest iloczynem dwówch wyrazów ciągu Fibonacciego
-while i <= dlugosc - 1:
+while i <= dlugosc :
     iloczyn = tab[i] * tab[j]
     if iloczyn == liczba:
         print("Ta liczba jest iloczynem dwóch wyrazów ciągu Fibonacciego: ", tab[i], " ", tab[j])
         break
     else:
-        if j < dlugosc - 1:
+        if j < (dlugosc - 1):
             j += 1
         else:    
             i += 1
-            j = i + 1
+            if i < (dlugosc - 1):
+                j = i + 1
 
-    #wykona się, gdy tab[i] to przedostatni element listy oraz tab[j] to ostatni element listy
-    if i == dlugosc - 2 and j == dlugosc - 1:
-        print("Ta liczba nie jest iloczynem żadnego z dwóch wyrazów ciągu Fibonacciego")
+    #wykona się, gdy tab[i] to ostatni element listy 
+    if i == (dlugosc - 1):
+        if iloczyn == liczba:
+            print("Ta liczba jest iloczynem dwóch wyrazów ciągu Fibonacciego: ", tab[i], " ", tab[j])
+        else:
+            print("Ta liczba nie jest iloczynem żadnego z dwóch wyrazów ciągu Fibonacciego")
         break
 
 #przykłady:
