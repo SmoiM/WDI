@@ -4,6 +4,12 @@
 #
 #Należy obsłużyć wyjątek wczytania danej niebędącej liczbą naturalną.
 
+#Zdefiniowanie wyjątku
+class NegativeNumberError(Exception): 
+    pass 
+class TooBigNumberError(Exception): 
+    pass
+
 #ciąg Fibonacciego
 fib1 = 0
 fib2 = 1
@@ -26,27 +32,20 @@ i = 0
 j = 1
 dlugosc = len(tab)
 
-#Zdefiniowanie wyjątku
-class NegativeNumberError(Exception): 
-    pass 
-class TooBigNumberError(Exception): 
-    pass
-
 #pobieranie liczby od użytkownika z zagwarantowaniem, że jest to liczba naturalna
 while True:
     try:
         liczba = int(input("Podaj liczbę: "))
         if liczba < 0:
-            raise 
+            raise NegativeNumberError
         if liczba > tab[dlugosc - 2] * tab[dlugosc - 1]:
             raise TooBigNumberError
         break
     
     except NegativeNumberError: 
-        print("Liczba nie jest naturalna") 
+        print("Liczba nie jest naturalna; jest mniejsza od zera") 
     except TooBigNumberError: 
         print("Wprowadzona liczba jest za duża. Wpisz mniejszą")
-
 
 #sprawdzenie czy liczba jest iloczynem dwówch wyrazów ciągu Fibonacciego
 while i <= dlugosc :
