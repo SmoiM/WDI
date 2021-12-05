@@ -34,13 +34,17 @@ def podciag():
                 raise NegativeNumberError
             break
         except NegativeNumberError:
-            print("Podana liczba jest ujemna")    
-
-# tworzenie listy z liczb pseudolosowych
+            print("Podana liczba jest ujemna")  
+            
+    for d in range (0, ilosc):
+        dod = int(input("Prosze podac element do dodania: "))
+        lista.append(dod)
+    """      
+    # tworzenie listy z liczb pseudolosowych
     for i in range(0, ilosc):
         liczba = random.randint(100,999)
         lista.append(liczba)
-
+    """
     l = len(lista)
     max = 0 # przechowuje wartość długości podciągu w danej iteracji pętli
     maxmax = 0 # przechowuje największą wartość jaką osiągnął max

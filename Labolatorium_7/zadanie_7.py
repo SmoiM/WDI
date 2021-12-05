@@ -32,7 +32,7 @@ iloczyn = 1
 silnia = []
 roznica = []
 
-#liczy silnię i zapisuje wynik i! dla 1 < i < liczba 
+#liczy silnię i zapisuje wynik i! dla 1 < i <= liczba 
 while i <= liczba:
     iloczyn = iloczyn * i
     silnia.append(iloczyn)
