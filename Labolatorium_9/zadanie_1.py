@@ -44,7 +44,7 @@ for i in range(m):
 def macierz(list, pomoc):
     pomoc = []
     for i in range(m):
-        x = [int(x) for x in input("Wprowadź elementy danego wiersza macierzy: ").split()] # Rozdzielenie wpisanego ciągu znaków na pojedyncze elementy i utworzenie z nich listy
+        x = [int(x) for x in input("Wprowadź elementy danego wiersza macierzy: ").split()] # Rozdzielenie wpisanych liczb oddzielonych spacjami na pojedyncze elementy i utworzenie z nich listy
         pomoc.append(x)
         list.extend(pomoc) # Dodanie do listy kilku elementów jednocześnie
         pomoc = []

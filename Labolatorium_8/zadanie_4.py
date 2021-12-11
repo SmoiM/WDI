@@ -45,14 +45,14 @@ def podciag():
         liczba = random.randint(100,999)
         lista.append(liczba)
     """
-    l = len(lista)
+    dlugosc = len(lista)
     max = 0 # przechowuje wartość długości podciągu w danej iteracji pętli
     maxmax = 0 # przechowuje największą wartość jaką osiągnął max
 
-    for i in range (0, l):
+    for i in range (0, dlugosc):
         wsk = str(lista[i]) # zamiana wsk na stringa
         wsk = int(wsk[::-1]) # zmiana kolejności cyfr w wsk i zamiana go z powrotem na int
-        for o in range (l - 1, i, -1): #pętla dekrementująca o 1 -> sprawdzamy ciąg od końca
+        for o in range (dlugosc - 1, i, -1): #pętla dekrementująca o 1 -> sprawdzamy ciąg od końca
             if lista[o] == wsk:
                 ciag.append(lista[i])
                 rewers.insert(0, lista[o]) # dodawanie elementu na początek listy -> .insert(x,zmienna) x - indeks, na który wstawiamy
