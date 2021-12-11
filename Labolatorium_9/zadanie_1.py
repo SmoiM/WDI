@@ -48,7 +48,6 @@ def macierz(list, pomoc):
         pomoc.append(x)
         list.extend(pomoc) # Dodanie do listy kilku elementów jednocześnie
         pomoc = []
-    print(list)
 
 # Funkcja sprawdzająca, czy założenia dodawania i odejmowania macierzy są spełnione (Czy mają ten sam zdefiniowany wcześniej przez m oraz n rozmiar)
 def check(rows, columns, m1, m2):
