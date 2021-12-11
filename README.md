@@ -5,7 +5,7 @@ Tutaj będą zadanka
 
 # Link
 
-https://home.agh.edu.pl/~pawljmlo/didactics/intro/2021/1 \n
+https://home.agh.edu.pl/~pawljmlo/didactics/intro/2021/1
 https://replit.com/languages/python3
 
 ## Lista numerowana
