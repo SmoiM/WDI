@@ -6,8 +6,10 @@ Tutaj będą zadanka
 # Link
 
 https://home.agh.edu.pl/~pawljmlo/didactics/intro/2021/1
+
 https://replit.com/languages/python3
 
+https://docs.google.com/spreadsheets/d/1RieA8vQwh912ZVVBKy8grQCWNiRfYIpMCr7VoFh5Ntg/edit#gid=1666900714
 ## Lista numerowana
 1. Pierwsze
 2. Drugie
