@@ -1,0 +1,7 @@
+ctg 0° - nie istnieje
+ctg 30° = √3
+ctg 45° = 1
+ctg 60° = √(3)/3
+ctg 90° = 0
+ctg 180° - nie istnieje
+ctg 360° - nie istnieje
