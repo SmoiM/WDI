@@ -5,40 +5,51 @@
 # Proszę przygotować przypadki użycia dla tych funkcji.
 
 def sin(kat):
-    filepath = "F:\DOMINIK\Studia\WDI\WDI\Labolatorium_10\sin.txt" #ścieżka do pliku
+    filepath = "Labolatorium_10\sin.txt" #ścieżka do pliku
     f = open(filepath, "r", encoding="utf-8") # otwieranie pliku tylko z odczytywaniem
+    w = open("Labolatorium_10\wynik.txt", "w", encoding="utf-8")
     for line in f:
         if kat in line:
             print(line, end = "")
+            print(line,file = w, end = "") # Pierwszy sposób zapisu plików
             break
     f.close() #zamknięcie pliku
+    w.close()
 
 def cos(kat):
-    filepath = "F:\DOMINIK\Studia\WDI\WDI\Labolatorium_10\cos.txt"
+    filepath = "Labolatorium_10\cos.txt"
     f = open(filepath, "r", encoding="utf-8")
+    w = open("Labolatorium_10\wynik.txt", "w", encoding="utf-8")
     for line in f:
         if kat in line:
-            print(line, end = "")
+            print(line, "\n", end = "")
+            w.write(line) # Drugi sposób zapisu do pliku
             break
-    f.close()   
+    f.close()
+    w.close()
 
 def tg(kat):
-    filepath = "F:\DOMINIK\Studia\WDI\WDI\Labolatorium_10\\tg.txt"
+    filepath = "Labolatorium_10\\tg.txt"
     f = open(filepath, "r", encoding="utf-8")
+    w = open("Labolatorium_10\wynik.txt", "w", encoding="utf-8")
     for line in f:
         if kat in line:
             print(line, end = "")
+            w.write(line)
             break
     f.close()
+    w.close()
 
 def ctg(kat):
-    filepath = "F:\DOMINIK\Studia\WDI\WDI\Labolatorium_10\ctg.txt"
+    filepath = "Labolatorium_10\ctg.txt"
     f = open(filepath, "r", encoding="utf-8")
+    w = open("Labolatorium_10\wynik.txt", "w", encoding="utf-8")
     for line in f:
         if kat in line:
             print(line, end = "")
+            w.write(line)
             break
-    f.close()
+    
     
 while True:
     while True:
