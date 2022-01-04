@@ -10,8 +10,11 @@
 
 import random
 
-class Figury:      
-    def sk(self, polozenie):
+class Figury:  
+    def __init__(self,polozenie):
+        self.polozenie = polozenie
+
+    def sk(self):
         p = False
         ruchy = [(1,-2),(2,-1),(2,1),(1,2),(-1,-2),(-2,-1),(-2,1),(-1,2)] # definicja ruchów skoczka
         for j in range (len(polozenie)): # sprawdza każdą figurę
@@ -23,6 +26,25 @@ class Figury:
         if p == False:
             print("Nic się tu nie szachuje :(")
 
+class Szachownica:
+    def __init__(self,plansza):
+        self.plansza = plansza
+
+    def tworzenie_szachownicy(self):
+        f = open("Labolatorium_12\plansza.txt", "w")
+
+        for i in range (1, plansza + 1):
+            for j in range (1, plansza + 1):
+                krotka = (j, i)
+                if krotka in polozenie and j == plansza:
+                    f.write(" S " + "\n" + '')
+                elif krotka in polozenie:
+                    f.write(" S " +'') 
+                else:
+                    f.write(" . "+'')
+                    if j == plansza:
+                        f.write("\n" + '')         
+        f.close()
 
 wybor = int(input("Proszę wybrać przypadek ustawienia skoczków na szachownicy:\n\t1 - dwa skoczki się szachują,\n\t2 - więcej niż dwa skoczki się szachują\n\t3 - nic się nie szachuje\n\t4 - losowe ustawienie n skoczków na planszy m na m\nWybór: "))
 
@@ -41,9 +63,14 @@ while True:
             plansza = 20 # wymiary szachownicy
             break
         case 4:
-            skoczki = int(input("Podaj liczbę skoczków: "))
-            polozenie = []
             plansza = int(input("Proszę podać wymiary planszy: "))
+            while True:
+                skoczki = int(input("Podaj liczbę skoczków: "))
+                if skoczki > plansza**2:
+                    print("Podaj mniejszą liczbę skoczków")
+                else:
+                    break
+            polozenie = []
             for s in range(0,skoczki):
                 x = random.randint(1,plansza)
                 y = random.randint(1,plansza)
@@ -59,24 +86,11 @@ while True:
                     polozenie.append(a)
             break
 
-skoczek = Figury()
-skoczek.sk(polozenie) # wywołanie metody z klasy 
+skoczek = Figury(polozenie)
+skoczek.sk() # wywołanie metody z klasy 
+plan = Szachownica(plansza)
+plan.tworzenie_szachownicy()
 
-f = open("Labolatorium_12\plansza.txt", "w")
-
-for i in range (1, plansza + 1):
-    for j in range (1, plansza + 1):
-        krotka = (j, i)
-        if krotka in polozenie and j == plansza:
-            f.write(" S " + "\n" + '')
-        elif krotka in polozenie:
-            f.write(" S " +'') 
-        else:
-            f.write(" . "+'')
-            if j == plansza:
-                f.write("\n" + '')
-            
-f.close()
 
 
 #_______________________________________________
