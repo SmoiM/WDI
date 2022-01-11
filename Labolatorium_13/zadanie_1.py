@@ -24,8 +24,18 @@ def euklides (a, b, tab):
     else:
         euklides(a,b,tab)
 
-a = int(input("Proszę podać pierwszą liczbę: "))
-b = int(input("Proszę podać drugą liczbę: "))
+while True: 
+    a = int(input("Proszę podać pierwszą liczbę: "))
+    if a != 0:
+        break
+    else:
+        print("Podana wartość jest równa 0. Proszę podać inną wartość")
+while True: 
+    b = int(input("Proszę podać pierwszą liczbę: "))
+    if b != 0:
+        break
+    else:
+        print("Podana wartość jest równa 0. Proszę podać inną wartość")
 nwd = []
 
 euklides(a, b, nwd)
